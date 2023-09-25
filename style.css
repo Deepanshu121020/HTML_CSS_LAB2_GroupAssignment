@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    height: 8vh;
+    background-color:rgb(59, 62, 69);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+nav{
+position: sticky;
+top: 0;
+text-align: center;
+}
+
+.menu{
+    list-style-type: none;
+    background-color: gray;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.menu li:hover{
+    background-color: black;
+}
+
+.ourMedicine,.healthCare{
+    display: none;
+    position: absolute;
+    width: auto;
+    background-color: whitesmoke;
+    top: 40px;
+}
+
+.menu li:nth-child(2):hover .ourMedicine, 
+.menu li:nth-child(3):hover .healthCare {
+    display: block;
+
+}
+
+.ourMedicine li ,.healthCare li{
+    display: block;
+}
+
+.ourMedicine li:hover,
+.healthCare li:hover{
+background-color: gainsboro;
+}
+
+.ourMedicine li a , .healthCare li a {
+    color: steelblue;
+    font-size: 16px;
+}
+
+.slider-frame{
+    overflow: hidden;
+    height: 500px;
+    width: 1520px;
+}
+
+@-webkit-keyframes slide-animation{
+    0%{left: 0px;}
+    10%{left: 0px;}
+    20%{left: 1520px;}
+    30%{left: 1520px;}
+    40%{left: 3040px;}
+    50%{left: 3040px;}
+    60%{left: 1520px;}
+    70%{left: 1520px;}
+    80%{left: 0px;}
+    90%{left: 0px;}
+    100%{left: 0px;}
+} 
+
+.slide-images{
+    width: 4560px;
+    height: 500px;
+    margin: 0 0 0 -3040px;
+    position: relative;
+    -webkit-animation-name: slide-animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+}
+
+.img-container{
+    height: 500px;
+    width: 1520px;
+    position: relative;
+    float: right;
+    z-index: -1;
+}
+
+.img-container img{
+    width: 1520px;
+    height: 500px;
+}
+
+
+
+
+
+
+.product-container {
+    display: inline-block;
+    width: 300px;
+    height: 290px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    /* transition: transform 0.2s, width 0.2s, height 0.2s; */
+}
+
+.product-container img{
+    width: 250px;
+    height: 200px;
+}
+
+/* Change background and border color on button click */
+.product-container.clicked {
+    background-color: rgb(250, 234, 230);
+    border: 2px solid rgb(0, 255, 76);
+}
+
+/* Hover effect to slightly increase size */
+/* .product-container:hover {
+    transform: scale(1.05);
+    width: 210px;
+    height: 210px;
+} */
+
+/* Clear floats for product rows */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.h2-margin{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.add-to-cart-button{
+border: 1px solid skyblue;
+background-color: rgb(191, 227, 241);
+color: orange;
+width: 300px;
+border-radius: 10px;
+font-size: medium;
+cursor: pointer;
+}
+
+.product-container p{
+    color:skyblue;
+    font-size: 20px;
+}
+
+.product-container.clicked.clicked{
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
+}
+
+.product-container:hover{
+    width: 350px;
+    height: 320px;
+    transition: ease-in-out;
+}
+
+.clearfix{
+    text-align: center;
+}
